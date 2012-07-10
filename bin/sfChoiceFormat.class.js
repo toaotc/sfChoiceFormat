@@ -78,11 +78,13 @@ sfChoiceFormat = (function() {
   }
 
   sfChoiceFormat.prototype.isValid = function(number, set) {
-    var elements, i, left, leftBracket, matches, n, right, rightBracket, str, total, _len, _ref;
+    var elements, i, left, leftBracket, matches, n, right, rightBracket, str, subset, total, _len, _ref;
     matches = (_ref = set.match(validatePattern)) != null ? _ref : [];
     n = matches.length;
     if (n < 3) throw 'Invalid set ' + set + '.';
-    if (set.match(/\{\s*n:([^\}]+)\}/)) return true;
+    if (subset = set.match(/\{\s*n:([^\}]+)\}/)) {
+      return this.isValidSetNotation(number, subset[1]);
+    }
     leftBracket = matches[0];
     rightBracket = matches[n - 1];
     elements = [];
@@ -100,6 +102,12 @@ sfChoiceFormat = (function() {
     left = leftBracket === '[' ? number >= elements[0] : leftBracket === '(' ? number > elements[0] : false;
     right = rightBracket === ']' ? number <= elements[total - 1] : rightBracket === ')' ? number < elements[total - 1] : false;
     return left && right;
+  };
+
+  sfChoiceFormat.prototype.isValidSetNotation = function(number, subset) {
+    var str;
+    str = subset.replace('n', number);
+    return eval(str);
   };
 
   sfChoiceFormat.prototype.parse = function(string) {

@@ -81,8 +81,7 @@ class sfChoiceFormat
         n = matches.length
         
         throw 'Invalid set ' + set + '.' if n < 3
-        
-        return true if set.match /\{\s*n:([^\}]+)\}/
+        return @isValidSetNotation number, subset[1] if subset = set.match /\{\s*n:([^\}]+)\}/
         
         leftBracket = matches[0]
         rightBracket = matches[n-1]
@@ -110,6 +109,10 @@ class sfChoiceFormat
         
         left and right
         
+    isValidSetNotation: (number, subset) ->
+        str = subset.replace 'n', number
+        eval str
+    
     parse: (string) ->
         matches = (string.split parsePattern) ? []
         [_ref[_i+1], _ref[(_i+=2)+1]] for j in matches

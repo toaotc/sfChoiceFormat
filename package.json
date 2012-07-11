@@ -2,4 +2,7 @@
   "scripts": {
     "test": "vows --spec"
   }
+  , "engines": {
+    "node": "*"
+  }
 }

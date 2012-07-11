@@ -1,8 +1,5 @@
 {
-  "scripts": {
-    "test": "vows --spec"
-  }
-  , "engines": {
+  "engines": {
     "node": "*"
   }
 }

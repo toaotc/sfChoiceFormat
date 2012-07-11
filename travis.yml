@@ -1,2 +1,5 @@
+before_install:
+  - gem install rake
+
 before_script:
   coffee -c -o lib src

@@ -1,18 +1,22 @@
 {
-  "author": "Enrico Thies",
-  "name": "sfChoiceFormat",
-  "description": "This is an javascript implementation of symfony's sfChoiceFormat developed by Wei Zhuo",
-  "version": "0.1.0",
-  "homepage": "http://travis-ci.org/#!/toaotc/sfChoiceFormat",
-  "main": "bin",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/toaotc/sfChoiceFormat.git"
-  },
-  "scripts": {
-  },
-  "engines": {
-    "node": ">= 0.4"
-  },
-  "dependencies": {}
+    "author": "Enrico Thies"
+    , "name": "sfChoiceFormat"
+    , "description": "This is an javascript implementation of symfony's sfChoiceFormat developed by Wei Zhuo"
+    , "version": "0.1.0"
+    , "homepage": "http://travis-ci.org/#!/toaotc/sfChoiceFormat"
+    , "main": "bin"
+    , "repository": {
+        "type": "git"
+        , "url": "git://github.com/toaotc/sfChoiceFormat.git"
+    }
+    , "engines": {
+        "node": ">= 0.4"
+    }
+    , "dependencies": {}
+    , "devDependencies": {
+        "coffee-script": "latest"
+    }
+    , "scripts": {
+        "test": "cake test"
+    }
 }

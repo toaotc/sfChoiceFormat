@@ -1,6 +1,6 @@
 {
   "author": "Enrico Thies",
-  "name": "toaotc/sfChoiceFormat",
+  "name": "toaotc-sfChoiceFormat",
   "description": "This is an javascript implementation of symfony's sfChoiceFormat developed by Wei Zhuo",
   "version": "0.1.0",
   "homepage": "http://travis-ci.org/#!/toaotc/sfChoiceFormat",

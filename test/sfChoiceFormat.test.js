@@ -6,7 +6,7 @@ var assert = require('assert'),
 
 vows.describe('format_number_choice').addBatch({
 	'When providing 0':{
-		topic: formatChoice.format_number_choice(0, {'%count%': 0}, 0)
+		topic: formatChoice.format_number_choice(plurals, {'%count%': 0}, 0)
 		, 'result should be "nothing found"': function (result) {
 			assert.isString(result);
 			assert.equal(result, 'nothing found');

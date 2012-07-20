@@ -16,7 +16,4 @@
     , "devDependencies": {
         "coffee-script": "latest"
     }
-    , "scripts": {
-        "test": "cake test"
-    }
 }

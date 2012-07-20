@@ -4,19 +4,15 @@
   "description": "This is an javascript implementation of symfony's sfChoiceFormat developed by Wei Zhuo",
   "version": "0.1.0",
   "homepage": "http://travis-ci.org/#!/toaotc/sfChoiceFormat",
-  "main": "./lib/format_number_choice",
+  "main": "bin",
   "repository": {
     "type": "git",
     "url": "git://github.com/toaotc/sfChoiceFormat.git"
   },
   "scripts": {
-    "test": "vows --spec"
   },
   "engines": {
     "node": ">= 0.4"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "vows": "0.6.x"
-  }
+  "dependencies": {}
 }
